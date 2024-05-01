@@ -16,5 +16,6 @@ WORKDIR /root/
 COPY . .
 
 RUN envsubst <config.toml.in >config.toml
+RUN cat config.toml
 RUN chmod +x ./server
 ENTRYPOINT ./server
