@@ -1,5 +1,6 @@
 # create an ubuntu webserver hosting the source-relay
 FROM ubuntu:22.04
+RUN apt update -y && apt upgrade -y
 RUN apt install -y gettext
 
 WORKDIR /root/
