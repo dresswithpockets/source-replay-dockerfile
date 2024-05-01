@@ -8,4 +8,5 @@ COPY . .
 EXPOSE 57452
 EXPOSE 8080
 
+RUN envsubst <config.toml.in >config.toml
 CMD ["server"]
