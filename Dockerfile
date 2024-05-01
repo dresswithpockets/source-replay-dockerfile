@@ -11,11 +11,11 @@ ARG MYSQL_DB_HOST
 ARG MYSQL_DB_USER
 ARG MYSQL_DB_PASSWORD
 ARG MYSQL_DB_PORT
+ARG MYSQL_DB_DBNAME
 
 WORKDIR /root/
 COPY . .
 
 RUN envsubst <config.toml.in >config.toml
-RUN cat config.toml
 RUN chmod +x ./server
 ENTRYPOINT ./server
