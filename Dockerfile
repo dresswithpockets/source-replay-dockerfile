@@ -10,7 +10,7 @@ EXPOSE 57452
 EXPOSE 8080
 
 # just to be sure lol
-RUN echo $MYSQL_DB_PORT
+RUN echo "$MYSQL_DB_HOST uwu" && echo $MYSQL_DB_PORT
 RUN envsubst <config.toml.in >config.toml
 RUN chmod +x ./server
 ENTRYPOINT ./server
