@@ -1,0 +1,69 @@
+[General]
+# Port to run the relay server on
+# Normally users can leave this alone unless specifically needed
+Port = 57452
+
+# Message content filter
+# If true, create a filter.txt within the same directory as the binary with each line being a regex expression
+# Note: can be expensive with a lot of regexes
+Filter = false
+
+[Bot]
+# Bot token
+# You may obtain this at https://discordapp.com/developers/applications/
+# Please note that client ID is not the same as bot token
+Token = "$DISCORD_BOT_TOKEN"
+
+# Instead of an embed sent by the bot
+# You have the option to enable simple message, to display incoming messages as "Name: Message"
+# Takes up less room but with less detail
+SimpleMessage = false
+
+# If the bot should also listen and transmit other bot's message
+# Please beware of an infinite loop with other bots this may cause
+ListenToBots = false
+
+[Database]
+# MySQL Database host
+Host = "$MYSQL_DB_HOST"
+
+# MySQL Database Username
+Username = "$MYSQL_DB_USER"
+
+# MySQL User Password
+Password = "$MYSQL_DB_PASSWORD"
+
+# MySQL Database To Use
+Database = "$MYSQL_DB_DBNAME"
+
+# MySQL Server Port
+Port = $MYSQL_DB_PORT
+
+# The protocol to parse DSN as.
+# Most users can leave this at the default "tcp"
+Protocol = "tcp"
+
+[UI]
+Enabled = true
+
+Port = 8080
+
+[Messages]
+
+# Format for all events if SimpleMessage is enabled
+EventFormatSimple = "%event%: %data%"
+
+# Map start format if SimpleMessage is enabled
+EventFormatSimpleMapStart = "Map Start: %data%"
+
+# Map end format if SimpleMessage is enabled
+EventFormatSimpleMapEnd = "Map Ended: %data%"
+
+# Player connect format if SimpleMessage is enabled
+EventFormatSimplePlayerConnect = "Player Connected: %data%"
+
+# Player disconnect format if SimpleMessage is enabled
+EventFormatSimplePlayerDisconnect = "Player Disconnected: %data%"
+
+# Player chat format if SimpleMessage is enabled
+EventFormatSimplePlayerChat = "%username%: %message%"r
