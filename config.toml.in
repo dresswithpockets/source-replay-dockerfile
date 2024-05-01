@@ -66,4 +66,4 @@ EventFormatSimplePlayerConnect = "Player Connected: %data%"
 EventFormatSimplePlayerDisconnect = "Player Disconnected: %data%"
 
 # Player chat format if SimpleMessage is enabled
-EventFormatSimplePlayerChat = "%username%: %message%"r
+EventFormatSimplePlayerChat = "%username%: %message%"
